@@ -1,0 +1,20 @@
+package Module5;
+import java.io.*;
+
+public class Question5{
+
+    static void readFile() throws IOException {
+        FileReader file = new FileReader("test.txt");
+        BufferedReader br = new BufferedReader(file);
+        System.out.println(br.readLine());
+        br.close();
+    }
+
+    public static void main(String[] args) {
+        try {
+            readFile();
+        } catch (IOException e) {
+            System.out.println("Exception handled: File not found.");
+        }
+    }
+}
